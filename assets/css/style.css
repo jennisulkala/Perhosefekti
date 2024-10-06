@@ -1,0 +1,389 @@
+html, body {
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;   
+}
+
+body {
+    cursor: url('/perhosefekti/favicon.png'), auto; /* Custom cursor image */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+:root {
+    --slider-value: 0; /* Initialize slider value to 0 */
+}
+
+
+
+
+.potatofield {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(#6e5738, #352B1E);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    gap:4rem;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    Justify-content:center;
+    overflow: hidden;
+}
+
+
+section {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    text-align: center;
+    overflow: auto;
+}
+
+.section--top {
+    overflow: hidden;
+    display: grid;
+    height: auto;
+}
+
+.section--middle {
+    overflow: hidden;
+    display: grid;
+    height: auto;
+}
+
+.section--bottom {
+    overflow: hidden;
+    display: grid;
+    height: auto;
+}
+
+
+.potato {
+    --tl:50%;
+    --tr:70%;
+    --br:80%;
+    --bl:40%;
+    background-image: radial-gradient(#c5a478, #826744,#5d492f);
+    border-top-left-radius: var(--tl);
+    border-top-right-radius: var(--tr);
+    border-bottom-left-radius: var(--bl);
+    border-bottom-right-radius: var(--br);
+    --rotate: 0deg;
+    rotate: var(--rotate);
+    --scale: 1;
+    scale: var(--scale);
+    --margintop: 0%;
+    margin-top: var(--margintop);
+    padding: 30px;
+    
+    max-height: 300px;
+    min-width: 200px;
+    flex-wrap: wrap;
+    rotate: calc(var(--rotate) + var(--slider-value) * 360deg);
+    filter: blur(calc(var(--slider-value) * 10px));
+    background-image: 
+    radial-gradient(circle, 
+        black calc(var(--slider-value) * 100%), 
+        transparent calc(var(--slider-value) * 100%)), 
+    radial-gradient(#c5a478, #826744, #5d492f);
+}
+
+
+
+.introscreen {
+    position: absolute;
+}
+
+
+
+.sky {
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    background-image: linear-gradient(#f2b6c4, #b4c6cc);
+    overflow-x: hidden;
+    padding-bottom: 500px;
+    background-image: 
+    linear-gradient(circle, 
+        black calc(var(--slider-value) * 100%), 
+        transparent calc(var(--slider-value) * 100%)), 
+    linear-gradient(#c5a478, #826744, #5d492f);
+
+    /* Dynamic gradient based on slider value */
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(
+            calc(242 * (1 - var(--slider-value))), /* Red value for pink */
+            calc(182 * (1 - var(--slider-value))), /* Green value for pink */
+            calc(196 * (1 - var(--slider-value)))  /* Blue value for pink */
+        ), 
+        rgb(
+            calc(0 + (0 * var(--slider-value))), /* Red value for black */
+            calc(0 + (0 * var(--slider-value))), /* Green value for black */
+            calc(0 + (255 * var(--slider-value))) /* Blue value transitioning from 0 to 255 (blue) */
+        ),
+        rgb(
+            calc(180 * (1 - var(--slider-value))), /* Red value for grey */
+            calc(198 * (1 - var(--slider-value))), /* Green value for grey */
+            calc(204 * (1 - var(--slider-value)))  /* Blue value for grey */
+        ),
+        rgb(
+            calc(0 + (0 * var(--slider-value))), /* Red value for black */
+            calc(0 + (0 * var(--slider-value))), /* Green value for black */
+            calc(0 + (0 * var(--slider-value)))  /* Blue value for black */
+        )
+    );
+}
+
+
+.grass {
+	width: 100%;
+	height: 80%;
+    display: grid;
+    position: absolute;
+    background-image: linear-gradient(transparent, #508c50, #6e5738);
+    bottom: 0px;
+    z-index: 10;
+    overflow-y: visible;
+}
+
+
+.flower {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    left: 20%;
+    top: 10%;
+    scale: 2; /* Original scale set to 200% */
+    scale: calc(2 + var(--slider-value));
+}
+
+.flower2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    left: 70%;
+    bottom: 120%;
+    scale: 2.5; /* Original scale set to 200% */
+    scale: calc(2.5 + var(--slider-value));
+}
+
+.petal {
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    background-image: linear-gradient(135deg, #d94800, #f0d909);
+    border-radius: 90%;
+    transform-origin: center 150px;
+    filter: blur(calc(2px + var(--slider-value) * 5px));
+     background-image: 
+    radial-gradient(closest-corner, 
+    #c3e224 calc(var(--slider-value) * 100%), 
+        transparent calc(var(--slider-value) * 100%)), 
+    radial-gradient(#e90707, #f85802, #c3e224);
+}
+
+.petal1 {
+    transform: rotate(0deg);
+}
+
+.petal2 {
+    transform: rotate(90deg);
+}
+
+.petal3 {
+    transform: rotate(180deg);
+}
+
+.petal4 {
+    transform: rotate(270deg);
+}
+
+.petal5 {
+    transform: rotate(45deg);
+}
+
+.petal6 {
+    transform: rotate(135deg);
+}
+
+.petal7 {
+    transform: rotate(225deg);
+}
+
+.petal8 {
+    transform: rotate(315deg);
+}
+
+
+.center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: radial-gradient(#c3e224, transparent);
+    border-radius: 50%;
+    top: calc(50% - -75px);
+    left: calc(50% - 45px);
+    filter: blur(calc(2px + var(--slider-value) * 10px));
+    scale: calc(1 + var(--slider-value) * 150%);
+    background-image: 
+    radial-gradient(closest-corner, 
+    #f85802 calc(var(--slider-value) * 100%), 
+        transparent calc(var(--slider-value) * 100%)), 
+    radial-gradient(#c3e224, #f85802);
+}
+
+/* Add animation to the cloud */
+@keyframes moveCloudsRight {
+    0% {
+        transform: translateX(100vw); /* Start just outside the right side of the viewport */
+    }
+    100% {
+        transform: translateX(-150%); /* Move completely off the left side of the viewport */
+    }
+}
+
+@keyframes moveCloudsLeft {
+    0% {
+        transform: translateX(-150%); /* Start completely off the left side of the viewport */
+    }
+    100% {
+        transform: translateX(100vw); /* Move completely off the right side of the viewport */
+    }
+}
+
+
+.cloud {
+    width: 450px;
+    height: 150px;
+    background-color: white;
+    position:absolute;
+    margin: 30px;
+    top: 500px;
+    left: 700px;
+    border-radius: 100px;
+    filter: opacity(50%);
+    filter: blur(10px);
+    scale: 150%;
+}
+
+
+.cloud::before, .cloud::after {
+    content: "";
+    position:absolute;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.cloud::before {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;;
+    top: -40px;
+    left: 60px;
+}
+
+.cloud::after {
+    width: 220px;
+    height: 220px;
+    border-radius: 150px;;
+    top: -20px;
+    left: 200px;
+}
+
+.position1 {
+    top: 250px;
+    left: 200px;
+    position: absolute;
+    animation: moveCloudsLeft 120s linear infinite;
+}
+
+.position2 {
+    top: 600px;
+    left: 300px;
+    position: absolute;
+    animation: moveCloudsRight 140s linear infinite;
+    scale: 90%;
+}
+
+.position3 {
+    top: 100px;
+    position: absolute;
+    animation: moveCloudsRight 100s linear infinite;
+    scale: 150%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.title_text {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-size: clamp(80px, 20vw, 250px);
+    font-style: normal;
+    color: #FBFF00;
+    margin-bottom: 0;
+    margin-top: 0px;
+    text-shadow: 0 0 3px #FBFF00, 0 0 10px #FBFF00, 0 0 10px #FBFF00, 0 0 0px #FBFF00,0 0 40px #FBFF00;    
+    padding-left: 30px;      
+    padding-right: 30px; 
+    padding-top: 200px;
+}
+
+.introduction_text {
+    font-family: "Martian Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #c8a67a;
+    margin-top: 1em;
+    padding: 0 15%;
+}
+
+
+.slider {
+    position: fixed;
+    top: 30px; /* You can adjust this to place it at the top */
+    left:50%;
+    transform: translate(-50%);
+    z-index: 9999;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;  /* Remove default slider styling in WebKit browsers */
+    width: 200px;              /* Set slider width */
+    height: 30px;              /* Track height */
+    border-radius: 30px;        /* Rounded corners for track */
+    outline: none;             /* Remove default outline */
+    border: 1px solid #FBFF00; 
+    margin: 20px 0;
+    background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;               /* Ball width */
+    height: 30px;              /* Ball height */
+    background-color: #FBFF00; /* Ball color */
+    border-radius: 50%;        /* Make the thumb round like a ball */
+    cursor: pointer;           /* Pointer cursor on hover */
+    border: 1px solid #FBFF00; /* Thumb border */
+}
