@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    cursor: url('/perhosefekti/favicon.png'), auto; /* Custom cursor image */
+    cursor: url('/perhosefekti/assets/img/favicon.png'), auto; /* Custom cursor image */
 }
 
 * {
