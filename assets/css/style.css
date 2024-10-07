@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    cursor: url('/assets/img/favicon.png'), auto; /* Custom cursor image */
+    cursor: url('./assets/img/favicon.png'), auto; /* Custom cursor image */
 }
 
 * {
