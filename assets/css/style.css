@@ -118,6 +118,9 @@ section {
 
 .introscreen {
     position: absolute;
+    height: 100%;
+    place-content: center;
+    display: grid;
 }
 
 
@@ -350,9 +353,6 @@ section {
     margin-bottom: 0;
     margin-top: 0px;
     text-shadow: 0 0 3px #FBFF00, 0 0 10px #FBFF00, 0 0 10px #FBFF00, 0 0 0px #FBFF00,0 0 40px #FBFF00;    
-    padding-left: 30px;      
-    padding-right: 30px; 
-    padding-top: 200px;
     z-index: 1;
 }
 
