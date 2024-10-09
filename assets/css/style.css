@@ -5,18 +5,23 @@ html, body {
     width: 100%;   
 }
 
+
 body {
-    cursor: url('./assets/img/favicon.png'), auto; /* Custom cursor image */
+    cursor: url('/favicon.png'), auto; /* Custom cursor image */
 }
+
 
 * {
     box-sizing: border-box;
 }
 
+
 body {
     position: relative;
     overflow-x: hidden;
 }
+
+
 
 :root {
     --slider-value: 0; /* Initialize slider value to 0 */
@@ -57,17 +62,20 @@ section {
     overflow: auto;
 }
 
+
 .section--top {
     overflow: hidden;
     display: grid;
     height: auto;
 }
 
+
 .section--middle {
     overflow: hidden;
     display: grid;
     height: auto;
 }
+
 
 .section--bottom {
     overflow: hidden;
@@ -169,6 +177,7 @@ section {
     scale: calc(2 + var(--slider-value));
 }
 
+
 .flower2 {
     position: relative;
     display: grid;
@@ -180,6 +189,7 @@ section {
     scale: 2.5; /* Original scale set to 200% */
     scale: calc(2.5 + var(--slider-value));
 }
+
 
 .petal {
     position: absolute;
