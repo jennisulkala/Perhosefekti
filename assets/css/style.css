@@ -7,7 +7,7 @@ html, body {
 
 
 body {
-    cursor: url('favicon.png'), auto; /* Custom cursor image */
+    cursor: url('../img/favicon.png'), auto; /* Custom cursor image */
 }
 
 
