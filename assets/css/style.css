@@ -414,6 +414,10 @@ section {
     z-index: 9999;
 }
 
+.slider#hover {
+    cursor: url('../img/favicon.png'), auto;
+}
+
 input[type="range"] {
     -webkit-appearance: none;  /* Remove default slider styling in WebKit browsers */
     width: 200px;              /* Set slider width */
@@ -423,6 +427,7 @@ input[type="range"] {
     border: 1px solid #FBFF00; 
     margin: 20px 0;
     background-color: transparent;
+    cursor: url('../img/favicon.png'), auto;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -434,4 +439,5 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;        /* Make the thumb round like a ball */
     cursor: pointer;           /* Pointer cursor on hover */
     border: 1px solid #FBFF00; /* Thumb border */
+    cursor: url('../img/favicon.png'), auto;
 }
